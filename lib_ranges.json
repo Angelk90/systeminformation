@@ -1,0 +1,115 @@
+{
+  "util.js": {
+    "line": [32, 2559],
+    "replace": []
+  },
+  "bluetoothVendors.js": {
+    "line": [3, 1138],
+    "replace": []
+  },
+  "audio.js": {
+    "line": [30, 220],
+    "replace": ["util"]
+  },
+  "battery.js": {
+    "line": [30, 312],
+    "replace": ["util"]
+  },
+  "bluetooth.js": {
+    "line": [33, 235],
+    "replace": ["util"]
+  },
+  "cpu.js": {
+    "line": [32, 1884],
+    "replace": ["util"]
+  },
+  "dockerSocket.js": {
+    "line": [17, 325],
+    "replace": []
+  },
+  "docker.js": {
+    "line": [22, 764],
+    "replace": ["util"]
+  },
+  "filesystem.js": {
+    "line": [33, 1535],
+    "replace": ["util"]
+  },
+  "graphics.js": {
+    "line": [32, 1128],
+    "replace": ["util"]
+  },
+  "internet.js": {
+    "line": [28, 217],
+    "replace": ["util"]
+  },
+  "memory.js": {
+    "line": [32, 563],
+    "replace": ["util"]
+  },
+  "network.js": {
+    "line": [32, 1813],
+    "replace": ["util"]
+  },
+  "osinfo.js": {
+    "line": [32, 1279],
+    "replace": ["util"]
+  },
+  "printer.js": {
+    "line": [29, 208],
+    "replace": ["util"]
+  },
+  "processes.js": {
+    "line": [34, 1311],
+    "replace": ["util"]
+  },
+  "system.js": {
+    "line": [34, 751],
+    "replace": ["util"]
+  },
+  "usb.js": {
+    "line": [29, 276],
+    "replace": ["util"]
+  },
+  "users.js": {
+    "line": [29, 369],
+    "replace": ["util"]
+  },
+  "virtualbox.js": {
+    "line": [20, 105],
+    "replace": ["util"]
+  },
+  "wifi.js": {
+    "line": [27, 850],
+    "replace": ["util"]
+  },
+  "cli.js": {
+    "line": [22, 95],
+    "replace": ["si"]
+  },
+  "index.js": {
+    "line": [52, 430],
+    "replace": [
+      "util",
+      "system",
+      "osInfo",
+      "cpu",
+      "memory",
+      "battery",
+      "graphics",
+      "filesystem",
+      "network",
+      "wifi",
+      "processes",
+      "users",
+      "internet",
+      "docker",
+      "docker",
+      "vbox",
+      "printer",
+      "usb",
+      "audio",
+      "bluetooth"
+    ]
+  }
+}

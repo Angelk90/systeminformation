@@ -1,0 +1,39 @@
+name: Concatenate Lib Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  concat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install terser --save-dev
+
+      - name: Run concatenation script
+        run: node concat-lib.js
+
+      - name: Create dist directory
+        run: mkdir -p dist_lib
+
+      - name: Move combined files to dist_lib/
+        run: |
+          mv lib_combined.js dist_lib/lib_combined.js
+          mv lib_combined.min.js dist_lib/lib_combined.min.js
+
+      - name: Commit and push dist_lib/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist_lib/lib_combined.js dist_lib/lib_combined.min.js
+          git commit -m "Add lib_combined.js and lib_combined.min.js in dist_lib"
+          git push
